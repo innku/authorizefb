@@ -5,5 +5,6 @@ get '/' do
 end
 
 get '/auth/facebook/callback' do
-  y(request.env['omniauth.auth'])
+  auth_hash = request.env['omniauth.auth']
+  to_display = y(auth_hash)
 end
