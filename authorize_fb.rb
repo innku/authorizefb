@@ -6,7 +6,7 @@ end
 
 get '/auth/facebook/callback' do
   auth = request.env['omniauth.auth']
-  logger.warn auth.inspect
+  puts auth.inspect
   @credentials = y(auth_hash)
   erb :index
 end
