@@ -1,10 +1,10 @@
-<p>
-  <a href='/auth/facebook'>Go to Facebok</a>
-</p>
-
 <% if @access_token %>
   <p>
     <strong>Access Token is:</strong><br />
     <em><%= @access_token %></em>
+  </p>
+<% else %>
+  <p>
+    <a href='/auth/facebook'>Get my token</a>
   </p>
 <% end %>
