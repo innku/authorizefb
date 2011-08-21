@@ -1,5 +1,9 @@
-<a href='/auth/facebook'>Go to Facebok</a>
+<p>
+  <a href='/auth/facebook'>Go to Facebok</a>
+</p>
 
 <% if @access_token %>
-  <strong>The access token is: <%= @access_token %></strong>
+  <p>
+    <strong>The access token to Manage your Pages Is: <%= @access_token %></strong>
+  </p>
 <% end %>
