@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'fb_graph'
 
 get '/' do
   erb :index
