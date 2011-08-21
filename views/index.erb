@@ -1,3 +1,5 @@
 <a href='/auth/facebook'>Go to Facebok</a>
 
-<%= @credentials.inspect if @credentials %>
+<% if @access_token %>
+  <strong>The access token is: <%= @access_token %></strong>
+<% end %>
