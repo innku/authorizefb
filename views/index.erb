@@ -3,6 +3,19 @@
     <strong>Your Access Token is:</strong> <br />
     <em><%= @user_token %></em>
   </p>
+  <% unless @accounts.empty? %>
+    <p>
+      <strong>The access tokens to your account are:</strong> <br />
+      <table>
+        <% @accounts.each do |account| %>
+          <tr>
+            <td><%= account[:name] %></td>
+            <td><%= account[:access_token] %></td>
+          </tr>
+        <% end %>
+      </table>
+    </p>
+  <% end %>
 <% else %>
   <p>
     <a href='/auth/facebook'>Get my token and my accounts</a>
