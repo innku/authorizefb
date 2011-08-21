@@ -1,10 +1,22 @@
-<% if @access_token %>
+<% if @user_token %>
   <p>
-    <strong>Access Token is:</strong><br />
-    <em><%= @access_token %></em>
+    <strong>Your Access Token is:</strong> <br />
+    <em><%= @user_token %></em>
   </p>
+  <% unless @accounts.empty? %>
+    <p>
+      <strong>The access tokens to your account are:</strong> <br />
+      <table>
+        <%= @accounts.each do |account| %>
+        <tr>
+          <td><%= account[:name] %></td>
+          <td><%= account[:access_token] %></td>
+        </tr>
+      </table>
+    </p>
+  <% end %>
 <% else %>
   <p>
-    <a href='/auth/facebook'>Get my token</a>
+    <a href='/auth/facebook'>Get my token and my accounts</a>
   </p>
 <% end %>
