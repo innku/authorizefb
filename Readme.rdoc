@@ -1,4 +1,4 @@
-= Publish content on your pages and apps
+= Gain access to your Fan Pages
 
 Getting authorization from facebook to publish content on your fan pages is kind of silly. To publish content on you site you need an access token for the fan page with the following permissions:
 
