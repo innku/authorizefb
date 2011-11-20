@@ -1,0 +1,36 @@
+= Publish content on your pages and apps
+
+Getting authorization from facebook to publish content on your fan pages is kind of silly. To publish content on you site you need an access token for the fan page with the following permissions:
+
+* offline_access
+* manage_pages
+* publish_stream
+
+There are two ways to get the right permissions from Facebook
+
+== The Easy way
+
+The code on this site is implemented on a url on heroku.
+
+http://authorizefb.heroku.com[http://authorizefb.heroku.com]
+
+* Give authorization to Kublog
+* Get your access token. 
+* Use it with a gem such as fb_graph
+
+It's worth mentioning that this app doesn't save anything, it just shows your tokens for you to use them.
+
+If you don't trust anything but the stuff you build there is another option.
+
+== The Paranoid Way
+
+* Create an app on facebook on http://developer.facebook.com
+* Clone this repo
+* Edit config.ru to use your "Facebook App ID" and your "Facebook App Secret"
+* Deploy anywhere with public access
+* Configure your facebook app's "App Domain" to hold the url you deployed to
+* Configure your facebook app's "Site URL" to hold this: "[appdomain]/auth/facebook/callback" (where app domain is the  one you configured in the previus step)
+* Authorize your facebook app to use your account
+* Get your access token and use it!
+
+Hopefully this helps
