@@ -10,13 +10,13 @@ There are two ways to get the right permissions from Facebook
 
 == The Easy way
 
-The code on this site is implemented on a url on heroku.
+The code on this repo is implemented on a url on heroku.
 
 http://authorizefb.heroku.com
 
 * Give authorization to Kublog
 * Get your access token. 
-* Use it with a gem such as fb_graph
+* Use it with a gem such as fb_graph[https://github.com/nov/fb_graph]
 
 It's worth mentioning that this app doesn't save anything, it just shows your tokens for you to use them.
 
