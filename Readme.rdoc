@@ -12,7 +12,7 @@ There are two ways to get the right permissions from Facebook
 
 The code on this site is implemented on a url on heroku.
 
-http://authorizefb.heroku.com[http://authorizefb.heroku.com]
+http://authorizefb.heroku.com
 
 * Give authorization to Kublog
 * Get your access token. 
